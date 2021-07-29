@@ -11,6 +11,7 @@ import com.example.kotlin_chat_v2_sample.R
 import com.example.kotlin_chat_v2_sample.databinding.LoginFragmentBinding
 import com.google.android.material.snackbar.Snackbar
 import com.kustomer.core.BuildConfig
+import java.lang.ref.WeakReference
 
 class LoginFragment : Fragment() {
     private lateinit var viewModel: LoginViewModel
@@ -65,7 +66,7 @@ class LoginFragment : Fragment() {
             })
 
             logIn.setOnClickListener {
-                viewModel.logIn(emailEt.text.toString())
+                viewModel.logIn(emailEt.text.toString(), WeakReference(context))
             }
 
             logInAsGuest.setOnClickListener { viewModel.continueAsGuest() }

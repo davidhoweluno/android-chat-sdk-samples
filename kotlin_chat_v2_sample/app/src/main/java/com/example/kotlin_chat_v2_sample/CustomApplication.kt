@@ -19,6 +19,7 @@ class CustomApplication : Application() {
                 // Always initialize the Kustomer SDK in your Application class
                 Kustomer.init(application = this, apiKey = BuildConfig.API_KEY) {
                     Log.d("KustomerApplication", "Kustomer initialized: ${it.dataOrNull}")
+                    Kustomer.getInstance().registerDevice()
                 }
             } catch (e: AssertionError) {
 
