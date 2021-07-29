@@ -1,3 +1,12 @@
+# Client testing revision
+
+This revision includes FCM implementation & stores login state
+Following insertions are required for use:
+1. local.properties file.
+    apiKey as specified in kustomer portal identifying organisation
+    userKey containing user specific descriptors
+2. Insert google-services.json file
+
 # Kustomer Chat v2 Sample App
 
 This sample app demonstrates the login and describe functionality available for [Kustomer Chat 2.0](https://help.kustomer.com/introduction-kustomer-chat-H1xk1Gb8v) in the [Kustomer Android Chat SDK](https://developer.kustomer.com/chat-sdk/v2-Android/docs).
